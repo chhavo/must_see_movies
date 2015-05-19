@@ -39,6 +39,21 @@
           </div>
         </div>
       </div>
+
+      <!-- <ul class ="list-group">
+        <% Movie.where({ :director_id => @director.id }).each do |movie| %>
+        <li class = "list-group-item"> <%= movie.title %> </li>
+        <% end %>
+      </ul> -->
+
+    <ul class ="list-group">
+        <% @director.movies.each do |movie| %>
+        <li class = "list-group-item"> <%= movie.title %> </li>
+        <% end %>
+      </ul>
+
+
+
     </div>
   </div>
 </div>
